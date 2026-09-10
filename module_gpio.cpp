@@ -4,11 +4,7 @@
 #include "common/common.h"
 #include "module_gpio_version.h"
 
-CLASS_MODULE_GPIO module_gpio(false);
-
-CLASS_MODULE_GPIO :: CLASS_MODULE_GPIO (bool _in) {
-	dumb = _in;
-}
+CLASS_MODULE_GPIO module_gpio;
 
 #if defined(ESP32)
 void CLASS_MODULE_GPIO::setFs(fs::LittleFSFS* fs) //esp32 flash file system

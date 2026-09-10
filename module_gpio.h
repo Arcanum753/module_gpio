@@ -20,7 +20,6 @@
 
 class  CLASS_MODULE_GPIO    {
 public:    
-    CLASS_MODULE_GPIO (bool _in);
 #if ESP32
     void setFs(fs::LittleFSFS* fs);
 #elif defined(ESP8266)
@@ -36,7 +35,6 @@ private:
     void  html_ver_get(AsyncWebServerRequest *request);
     
 protected: 
-bool  dumb = false;
 #if ESP32
     fs::LittleFSFS*               _fs;
 #elif defined(ESP8266)
